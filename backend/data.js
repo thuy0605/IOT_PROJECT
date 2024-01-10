@@ -5,6 +5,9 @@ export default async function fetchData() {
       revalidate: 0,
     },
   });
+  if (!response.ok) {
+    throw new Error("fetch failed!");
+  }
 
   return await response.json();
 }

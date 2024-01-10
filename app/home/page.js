@@ -1,7 +1,7 @@
 import fetchData from "@/backend/data";
 import Menu from "../(components)/menu";
 
-export default async function Mainpage() {
+export default async function MainPage() {
   const sensorData = await fetchData();
   const temperature = sensorData.temperature;
   const humidity = sensorData.humidity;
